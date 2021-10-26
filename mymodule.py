@@ -11,8 +11,8 @@ def hello():
 
 def fib(n):
     a = b = 1
-    print(a)
+    print(a, end=', ')
     for i in range(n - 2):
         a, b = b, a + b
-        print(a)
+        print(a, end=', ')
     return b
