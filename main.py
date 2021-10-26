@@ -1,4 +1,7 @@
-import mymodule
+import mymodule as my
 
-mymodule.hello()
-print(mymodule.fib(10))
+my.hello()
+a = int(input('Введите целое число \n'
+              'для вычисления чисел \n'
+              'Фибоначчи:'))
+print(my.fib(a))
