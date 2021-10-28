@@ -1,7 +1,12 @@
 import mymodule as my
 
-my.hello()
+while 1:
+    try:
+        #my.hello()
 
-n = int(input('Введите целое число для вычисления \n'
-              'чисел Фибоначчи: '))
-print(my.fib(n))
+        n = int(input('Введите целое число для вычисления \n'
+                      'чисел Фибоначчи: '))
+        print(my.fib(n))
+
+    except Exception:
+        print('Неправильное значение')
