@@ -1,12 +1,11 @@
 # autor: Misac Igor
 # licese: GPL3
 """This is the "example" module.
-
 """
 
 
-def hello():
-    print('Hello, world!')
+# def hello():
+#     print('Hello, world!')
 
 
 def fib(n):
