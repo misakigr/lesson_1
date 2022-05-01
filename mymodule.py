@@ -10,7 +10,7 @@
 
 def fib(n):
     a = b = 1
-    print(a, end=', ')
+    print("0,", a, end=', ')
     for i in range(n - 2):
         a, b = b, a + b
         print(a, end=', ')
