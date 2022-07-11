@@ -7,7 +7,7 @@ def compute(n):
            #perev = reversed1(str(proizv))
             if str(i * j) == str(i * j)[ : : -1] and a < (i * j):
                 a, b, c, d = (i * j), str(i * j)[ : : -1], i, j
-    print(f"Самый большой палиндром при умножении {len(str(n1))}-значных чисел: {c} x {d} равняется значению {a}, '<-->', {b}")
+    print(f"Самый большой палиндром при умножении {len(str(n1))}-значных чисел: {c} x {d} равняется значению {a} <--> {b}")
 
 if __name__ == "__main__":
     compute(1000)
