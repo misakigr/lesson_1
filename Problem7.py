@@ -10,3 +10,4 @@ while sieve:
     if c == b:
         break
     c += 1
+
