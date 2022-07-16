@@ -20,6 +20,7 @@ s = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
 sp = s.split(" ")
 
+
 def filling_mas():
     mas = []
     k = 0
@@ -29,11 +30,13 @@ def filling_mas():
 
         for y in range(20):
             lst.append(int(sp[k]))
+
             k += 1
 
         mas.append(lst)
 
     return mas
+
 
 def main():
     mas = filling_mas()
@@ -72,7 +75,7 @@ def main():
             if num > maximum:
                 maximum = num
 
-            # по диагонали вливо вниз
+            # по диагонали влeво вниз
 
             num = mas[x][y] * mas[x + 1][y - 1] * mas[x + 2][y - 2] * mas[x + 3][y - 3]
             if num > maximum:
@@ -81,7 +84,7 @@ def main():
     for x in range(3, 20):
         for y in range(3, 20):
 
-            # по диагонали вливо вверх
+            # по диагонали влeво вверх
 
             num = mas[x][y] * mas[x - 1][y - 1] * mas[x - 2][y - 2] * mas[x - 3][y - 3]
             if num > maximum:
@@ -90,12 +93,13 @@ def main():
     for x in range(20):
         for y in range(3, 20):
 
-            # по горизонтали вливо
+            # по горизонтали влeво
 
             num = mas[x][y] * mas[x][y - 1] * mas[x][y - 2] * mas[x][y - 3]
             if num > maximum:
                 maximum = num
 
     return maximum
+
 
 print(main())
