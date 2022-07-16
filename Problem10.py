@@ -24,5 +24,4 @@ if __name__ == '__main__':
     n = 2_000_000
     result = str(sum(main()))
     res = result[-12:-9] + ' ' + result[-9:-6] + ' ' + result[-6:-3] + ' ' + result[-3:]
-    print(f'Сумма всех простых чисел ниже {n}'
-          f' равна: {res}')
+    print(f'Сумма всех простых чисел ниже {n} равна: {res}')
