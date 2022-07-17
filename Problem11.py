@@ -19,8 +19,7 @@ s = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54 \
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
 sp = s.split(" ")
-x1 = 0
-t = 0
+
 def filling_mas():
     mas = []
     k = 0
@@ -30,13 +29,11 @@ def filling_mas():
 
         for y in range(20):
             lst.append(int(sp[k]))
-
             k += 1
 
         mas.append(lst)
 
     return mas
-
 
 def main():
     mas = filling_mas()
@@ -45,73 +42,60 @@ def main():
     for x in range(17):
         for y in range(17):
 
-            # по диагонали вправо вниз
+            # по діагоналі вправо вниз
 
             num = mas[x][y] * mas[x + 1][y + 1] * mas[x + 2][y + 2] * mas[x + 3][x + 3]
             if num > maximum:
                 maximum = num
-                x1 = str(mas[x][y]) + str(mas[x + 1][y + 1]) + str(mas[x + 2][y + 2])+str(mas[x + 3][x + 3])
-                y1 = num
 
-            # по диагонали вправо вверх
+            # по діагоналі вправо вверх
 
             num = mas[x][y] * mas[x - 1][y + 1] * mas[x - 2][y + 2] * mas[x - 3][x + 3]
             if num > maximum:
                 maximum = num
-                x2 = str(mas[x][y]) + str(mas[x + 1][y + 1]) + str(mas[x + 2][y + 2]) + str(mas[x + 3][x + 3])
-                y2 = num
 
-            # по вертикали вниз
+            # по вертикалі вниз
 
             num = mas[x][y] * mas[x + 1][y] * mas[x + 2][y] * mas[x + 3][y]
             if num > maximum:
                 maximum = num
-                x3 = str(mas[x][y]) + str(mas[x + 1][y + 1]) + str(mas[x + 2][y + 2])+str(mas[x + 3][x + 3])
-                y3 = num
-            # по вертикали вверх
+
+            # по вертикалі вверх
 
             num = mas[x][y] * mas[x - 1][y] * mas[x - 2][y] * mas[x - 3][y]
             if num > maximum:
                 maximum = num
-                x4 = mas[x][y]
 
-            # по горизонтали вправо
+            # по горизонталі вправо
 
             num = mas[x][y] * mas[x][y + 1] * mas[x][y + 2] * mas[x][y + 3]
             if num > maximum:
                 maximum = num
-                x5 = mas[x][y]
 
-            # по диагонали влeво вниз
+            # по діагоналі вліво вниз
 
             num = mas[x][y] * mas[x + 1][y - 1] * mas[x + 2][y - 2] * mas[x + 3][y - 3]
             if num > maximum:
                 maximum = num
-                x6 = str(mas[x][y]) + str(mas[x + 1][y - 1]) + str(mas[x + 2][y - 2])+str(mas[x + 3][y - 3])
 
-                print(str(mas[x][y]),' * ',str(mas[x + 1][y - 1]),' * ',str(mas[x + 2][y - 2]),' * ',str(mas[x + 3][y - 3]),'=', maximum, '(',x,',', y,')', ';','(', x + 1,',',y - 1,')', ';',x + 2,y - 2, ';',x + 3,y - 3)
     for x in range(3, 20):
         for y in range(3, 20):
 
-            # по диагонали влeво вверх
+            # по діагоналі вліво вверх
 
             num = mas[x][y] * mas[x - 1][y - 1] * mas[x - 2][y - 2] * mas[x - 3][y - 3]
             if num > maximum:
                 maximum = num
-                x7 = mas[x][y]
 
     for x in range(20):
         for y in range(3, 20):
 
-            # по горизонтали влeво
+            # по горизонталі вліво
 
             num = mas[x][y] * mas[x][y - 1] * mas[x][y - 2] * mas[x][y - 3]
             if num > maximum:
                 maximum = num
 
-
     return maximum
 
-
 print(main())
-
